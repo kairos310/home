@@ -1,104 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+<head>
+	<title>Hello World!</title>
 
-    <!--
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+	<!-- Import the webpage's stylesheet -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
 
-    <title>Hello World!</title>
+	<!-- Import the webpage's javascript file -->
+	<script src="flowfield.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
 
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
-    <meta
-      name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
-    <meta
-      property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
-    />
-    <meta
-      property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
-    />
-    <meta name="twitter:card" content="summary" />
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<!-- This is the start of content for our page -->
+			<h1 class="title">
+				Hello!<br /><span style="font-weight: 100">I'm</span><br /><b><i>Kairos</i></b>
+			</h1>
+			<h3>I do computer stuff</h3>
+			<div class="arrow-down">
+				<a href="#intro"></a>
+			</div>
+			<!-- Instructions on using this project -->
+			<div class="main">
+				<a id="intro"></a>
+				<h2>I'm a Computer Science & Physics student at Rhodes College</h2>
+				<p>
+					I love working with anything <strong>visual!</strong> Here are some
+					of my projects from my Graphics class.
+				</p>
+				<div class="parent">
+					<div class="box">
+						<header>Generative Tree</header>
+						<main>
 
-    <!-- Import the webpage's stylesheet -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/style.css" />
+							Project
+<!--
+							<iframe src="/tree/index.html"> </iframe>
+-->
+						</main>
+						<footer></footer>
+					</div>
+				</div>
 
-    <!-- Import the webpage's javascript file -->
-    <script src="/flowfield.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="content">
-        <!-- This is the start of content for our page -->
-        <h1 class="title">
-          Hello!<br /><span style="font-weight: 100">I'm</span><br /><b
-            ><i>Kairos</i></b
-          >
-        </h1>
-        <h3>I do computer stuff</h3>
-        <div class="arrow-down">
-          <a href="#intro"></a>
-        </div>
-        <!-- Instructions on using this project -->
-        <div class="main">
-          <a id="intro"></a>
-          <h2>I'm a Computer Science & Physics student at Rhodes College</h2>
-          <p>
-            I love working with anything <strong>visual!</strong> Here are some
-            of my projects from my Graphics class.
-          </p>
-          <div class="parent">
-            <div class="box">
-              <header>Generative Tree</header>
-              <main>
+				<h2>I also love working with the web</h2>
+				<p>Here's a website I made for RHOKSAT</p>
+				<h2>I like playing with UI</h2>
+				<p>Here's some of my experiments</p>
+				<h2>I like <b>adaptive and customisable</b> designs</h2>
+				<p>Reload the website for a fresh look!</p>
+			</div>
+		</div>
+	</div>
+	<!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
+	<footer class="footer">
+		<div class="links"></div>
+	</footer>
+</body>
 
-                Project
-
-                <iframe src="/tree/index.html"> </iframe>
-
-              </main>
-              <footer></footer>
-            </div>
-          </div>
-
-          <h2>I also love working with the web</h2>
-          <p>Here's a website I made for RHOKSAT</p>
-          <h2>I like playing with UI</h2>
-          <p>Here's some of my experiments</p>
-          <h2>I like <b>adaptive and customisable</b> designs</h2>
-          <p>Reload the website for a fresh look!</p>
-        </div>
-      </div>
-    </div>
-    <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-    </footer>
-  </body>
 </html>
