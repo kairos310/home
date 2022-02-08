@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Mandelbrot and Julia Set</title>
+		<script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+
+	</head>
+	<body style = "text-align: center; margin: auto; overflow:hidden;">
+
+		<canvas class="glslCanvas" data-fragment="
+		// Author: Kairos Wong
+		// Title: Mandelbrot Set
+
+		#ifdef GL_ES
+		precision mediump float;
+		#endif
+
+		uniform vec2 u_resolution;
+		uniform vec2 u_mouse;
+		uniform float u_time;
+		#define PI 3.1415926538;
+
+
+		float julia(float r, float scale){
+			float scaleX = 2. * scale;
+			float scaleY = 2. * scale;
+
+			float zx = gl_FragCoord.x/u_resolution.x * scaleX - 1. * scale;
+			float zy = gl_FragCoord.y/u_resolution.y * scaleY - 1. * scale;
+			float cx = (u_mouse.x/u_resolution.x * 2. - 1.) * scale;
+			float cy = (u_mouse.y/u_resolution.y * 2. - 1.) * scale;
+			float iteration = 0.;
+			for (int i = 0; i < 1000; i++) {
+					if(zx * zx + zy * zy < r * r){
+						iteration = float(i);
+					}else{
+							break;
+					}
+					float xtemp = zx*zx - zy*zy;
+					zy = 2.* zx * zy + cy;
+					zx = xtemp + cx;
+
+			}
+			return iteration;
+		}
+
+		float mandelbrot(float r, float scale){
+			float scaleX = 2. * scale;
+			float scaleY = 2. * scale;
+
+			float zx = gl_FragCoord.x/u_resolution.x * scaleX - 1. * scale;
+			float zy = gl_FragCoord.y/u_resolution.y * scaleY - 1. * scale;
+			float cx = 0.;
+			float cy = 0.;
+			float iteration = 0.;
+
+			for (int i = 0; i < 1000; i++) {
+					if(cx*cx + cy*cy <= r * r){
+						iteration = float(i);
+					}else{
+							break;
+					}
+					float xtemp = cx*cx - cy*cy + zx;
+					cy = 2.* cx * cy + zy;
+					cx = xtemp;
+
+			}
+			return iteration;
+		}
+
+		void main() {
+			float julia = julia(4., 2.);
+			float mandelbrot = mandelbrot(4., 2.);
+			vec3 color = vec3(julia /50. + 0.2, mandelbrot / 100. - julia/ 102. + 0.2, 0.5 - julia /8000.);
+			gl_FragColor = vec4(color, 1.0);
+		}
+
+		" width="800" height="800"></canvas>
+		<script>
+			let w = window.innerWidth;
+			let h = window.innerHeight;
+			let s = w < h ? w : h;
+			document.getElementsByTagName("canvas")[0].width = s;
+			document.getElementsByTagName("canvas")[0].height = s;
+			window.addEventListener('resize', scale);
+			function scale(){
+				let w = window.innerWidth;
+				let h = window.innerHeight;
+				let s = w < h ? w : h;
+				document.getElementsByTagName("canvas")[0].width = s;
+				document.getElementsByTagName("canvas")[0].height = s;
+			}
+		</script>
+	</body>
+</html>

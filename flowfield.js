@@ -8,9 +8,7 @@ var zoff = 0;
 var r,g,b;
 
 function setup(){
-  let w = window.innerWidth  < 800 ? window.innerWidth - 16: 800;
-  let h;
-  var c = createCanvas(window.innerWidth - 16,window.innerHeight);
+  var c = createCanvas(window.innerWidth -18,window.innerHeight);
   c.class("flow");
   col = floor(width/scl);
   row = floor(height/scl);
@@ -22,6 +20,11 @@ function setup(){
     let position = createVector(random(316) + window.width / 2 - 158 ,random(288) + window.height / 2 - 144)
     particles[i] = new Particle(position);
   }
+  background(50)
+}
+
+function windowResized(){
+	resizeCanvas(window.innerWidth - 18, window.innerHeight)
   background(50)
 }
 

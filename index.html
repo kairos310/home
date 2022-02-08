@@ -11,12 +11,13 @@
 	<link rel="stylesheet" href="style.css" />
 
 	<!-- Import the webpage's javascript file -->
-	<script src="flowfield.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 
 <body>
+
+	<script src="flowfield.js"></script>
 	<div class="wrapper">
 		<div class="content">
 			<!-- This is the start of content for our page -->
@@ -31,37 +32,66 @@
 			<div class="main">
 				<a id="intro"></a>
 				<h2>I'm a Computer Science & Physics student at Rhodes College</h2>
+
+				<h1><b>exp</b>erience</h1>
+				<div class="parent">
+					<div class="box">
+						<header>Academic Tutor</header>
+						<main>
+							<p>
+							Tutor Computer Science Fundamentals, Object Oriented Programming, Data Structures and Algorithms, involves reading and debugging project code on the fly along with communicating it to students. Physics 1 and 2 (Kinematics, Dynamics, Electromagnetism), physics problem solving and explanation.
+							</p>
+						</main>
+						<footer></footer>
+					</div>
+					<div class="box">
+						<header>RHOK SAT</header>
+						<main>
+							<p>
+							Write flight software for the microsatellite,  working on a system for over the air updates through a remotely activated bootloader.
+							</p>
+						</main>
+						<footer></footer>
+					</div>
+				</div>
+
+				<h1><b>pro</b>jects</h1>
 				<p>
 					I love working with anything <strong>visual!</strong> Here are some
 					of my projects from my Graphics class.
 				</p>
 				<div class="parent">
 					<div class="box">
-						<header>Generative Tree</header>
+						<header onclick="location.href='https://kairos310.github.io/generativeTree/';">Generative Tree</header>
 						<main>
-
-							Project
-							<iframe src="https://kairos310.github.io/generativeTree/"> </iframe>
+							<p>
+								Procedurally generated tree using <b>THREE.js</b>. Uses tube geometry, catmul-rom splines, a vertex and fragment shader for swaying branches and limited color palatte.
+							</p>
+							<iframe src="https://kairos310.github.io/generativeTree/" max-width="800px"> </iframe>
 						</main>
 						<footer></footer>
 					</div>
 					<div class="box">
-						<header>Image Editor</header>
+						<header onclick="location.href='https://kairos310.github.io/imageEditor/';">Image Editor</header>
 						<main>
-
-							Project
-							<iframe src="https://kairos310.github.io/imageEditor/"> </iframe>
+							<p>
+								Image Editor incorporating multiple brushes and filters. Various distributions used for brushes to create a softer look. Kernels used for filters.
+							</p>
+							<iframe src="https://kairos310.github.io/imageEditor/" max-width="800px"> </iframe>
+						</main>
+						<footer></footer>
+					</div>
+					<div class="box">
+						<header onclick="location.href='frac.html';">Mandelbrot Set</header>
+						<main>
+							<p>
+								Hovering over the mandelbrot set displays the corresponding julia set in red. Written in <b>GLSL</b> on the fragment shader, running on the GPU.
+							</p>
+							<iframe src="frac.html" id="frac"> </iframe>
 						</main>
 						<footer></footer>
 					</div>
 				</div>
-
-				<h2>I also love working with the web</h2>
-				<p>Here's a website I made for RHOKSAT</p>
-				<h2>I like playing with UI</h2>
-				<p>Here's some of my experiments</p>
-				<h2>I like <b>adaptive and customisable</b> designs</h2>
-				<p>Reload the website for a fresh look!</p>
 			</div>
 		</div>
 	</div>
@@ -69,6 +99,8 @@
 	<footer class="footer">
 		<div class="links"></div>
 	</footer>
+
+
 </body>
 
 </html>
