@@ -2,7 +2,7 @@ var particles = [];
 var flowfield = [];
 
 var inc = 0.1;
-var scl = 20;
+var scl = 30;
 var row,col;
 var zoff = 0;
 var r,g,b;
@@ -16,7 +16,7 @@ function setup(){
   flowfield = new Array(col*row);
 
   fill(180, 100, 71)
-  for(var i = 0; i < 200; i++){
+  for(var i = 0; i < window.innerWidth / 10; i++){
     let position = createVector(random(316) + window.width / 2 - 158 ,random(288) + window.height / 2 - 144)
     particles[i] = new Particle(position);
   }
@@ -87,7 +87,7 @@ function Particle(p){
       if(dist < this.repulsiveForce && dist > 0){
         let force = p5.Vector.sub(this.pos, p.pos)
         force.normalize()
-        force.mult(1/dist)
+        force.mult(1/dist * 2)
         this.applyForce(force)
       }
     }
@@ -122,13 +122,15 @@ function Particle(p){
 
 }
 function mousePressed(){
-  r = random(0,255);
-  g = random(0,255);
-  b = random(0,255);
-  for(var i = 0; i < 10; i++){
-    let position = createVector(mouseX, mouseY)
-    particles.push(new Particle(position));
-  }
+	if(mouseY < window.innerHeight){	
+	  r = random(0,255);
+	  g = random(0,255);
+	  b = random(0,255);
+	  for(var i = 0; i < 10; i++){
+	    let position = createVector(mouseX, mouseY)
+	    particles.push(new Particle(position));
+	  }
+	}
 }
 
 function mouseMoved(){

@@ -164,3 +164,9 @@ div.box>main{
   display:flex;
   flex-direction:column;
 }
+
+@media only screen and (max-width: 1000px) {
+	iframe{
+
+	}
+}
