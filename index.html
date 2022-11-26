@@ -13,6 +13,7 @@
 	<!-- Import the webpage's javascript file -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+	<script src="script.js"></script>
 </head>
 
 <body>
@@ -25,41 +26,94 @@
 				Hello!<br /><span style="font-weight: 100">I'm</span><br /><b><i>Kairos</i></b>
 			</h1>
 			<h3>I do computer stuff</h3>
-			<div class="arrow-down">
-				<a href="#intro"></a>
-			</div>
+			<a href="#intro">
+				<div class="arrow-down">
+				</div>
+			</a>
 			<!-- Instructions on using this project -->
 			<div class="main">
 				<a id="intro"></a>
-				<h2>I'm a Computer Science & Physics student at Rhodes College</h2>
+				<h2>I'm a Computer Science & Physics student at Rhodes College.</h2>
 
 				<h1><b>exp</b>erience</h1>
 				<div class="parent">
 					<div class="box">
-						<header>Academic Tutor</header>
+						<header>Academic Tutor - Rhodes College</header>
+						<div>September 2021 - Present</div>
+						<div>Memphis, Tennessee</div>
 						<main>
 							<p>
 							Tutor Computer Science Fundamentals, Object Oriented Programming, Data Structures and Algorithms, involves reading and debugging project code on the fly along with communicating it to students. Physics 1 and 2 (Kinematics, Dynamics, Electromagnetism), physics problem solving and explanation.
 							</p>
+							<div class="skills"><span>Python</span><span>Java</span><span>Object Oriented</span><span>Teaching Skills</span></div>
 						</main>
 						<footer></footer>
 					</div>
 					<div class="box">
-						<header>RHOK SAT</header>
+						<header>Research Fellow - RHOK-SAT </header>
+						<div>October 2021 - Present</div>
+						<div>Memphis, Tennessee</div>
 						<main>
 							<p>
-							Write flight software for the microsatellite,  working on a system for over the air updates through a remotely activated bootloader.
+							Developed communication system between picosatellite and Rhodes ground station including command handling and status beacons in Embedded C.
+							Configured detumbling algorithm and a logging file system and integrated them into nominal processes. Working on a system for over the air updates through a remotely activated bootloader. 
+							
 							</p>
+							<div class="skills"><span>Embedded C</span><span>C/C++</span><span>Systems Programming</span><span>Version Control</span></div>
+						</main>
+						<footer></footer>
+					</div>
+					<div class="box">
+						<header>Summer Intern - Oaks and Crown</header>
+						<div>May 2021 - August 2021</div>
+						<div>Memphis, Tennessee</div>
+						<main>
+							<p>
+								Integrated the Google maps API into Squarespace to create an interactive map.
+								Sent out bulk emails and personal one on one check-ups with students to keep them updated on their classwork.
+								
+							</p>
+							<div class="skills"><span>APIS</span><span>JavaScript </span><span>HTML</span><span>Mentorship</span></div>
 						</main>
 						<footer></footer>
 					</div>
 				</div>
-
+				<h1><b>edu</b>cation</h1>
+				<p></p>
+				<div class="parent">
+					<div class="box">
+						<header>Rhodes College</header>
+						<main>
+							<p>August 2020 - May 2024</p>
+							<p>Bachelors of Science</p>
+							<p>Computer Science and Physics Double Major</p>
+							<img></img>
+							<div>Involvement
+								Sigma Pi Sigma honor society
+								Vice president of the Aerospace Engineering Club
+								Musical Director for Contents Under Pressurer Comedy Improv Troupe
+							</div>
+						</main>
+						<div class="courses">
+							<div>Computer Science Fundamentals</div>
+							<div>Object Oriented Programming</div>
+							<div>Data Structures and Algorithms</div>
+							<div>Discrete Mathematics</div>
+							<div>Introduction to Systems Programming</div>
+							<div>Advanced Algorithms</div>
+							<div>Computer Science Graphics</div>
+							<div>Machine Learning</div>
+							<div>Parallel Systems</div>
+							<div>Dynamics</div>
+							<div>Modern Physics</div>
+						</div>
+					</div>
+				</div>
 				<h1><b>pro</b>jects</h1>
-				<p>
+				<h2>
 					I love working with anything <strong>visual!</strong> Here are some
 					of my projects from my Graphics class.
-				</p>
+				</h2>
 				<div class="parent">
 					<div class="box">
 						<header onclick="location.href='https://kairos310.github.io/generativeTree/';">Generative Tree</header>
@@ -68,6 +122,7 @@
 								Procedurally generated tree using <b>THREE.js</b>. Uses tube geometry, catmul-rom splines, a vertex and fragment shader for swaying branches and limited color palatte.
 							</p>
 							<iframe src="https://kairos310.github.io/generativeTree/" max-width="800px"> </iframe>
+							<div class="skills"><span>Three.js</span><span>GLSL</span><span>JavaScript</span></div>
 						</main>
 						<footer></footer>
 					</div>

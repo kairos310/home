@@ -12,8 +12,8 @@
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
-  --font-family: "Be Vietnam Pro";
-  --font-family-header: "Be Vietnam Pro";
+  --font-family: "Be Vietnam Pro", sans-serif;
+  --font-family-header: "Be Vietnam Pro", sans-serif;
 }
 
 /* Basic page style resets */
@@ -29,7 +29,9 @@
 /******************************************************************************
 END Glitch hello-app default styles
 ******************************************************************************/
-
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-family);
   background-color: var(--color-bg);
@@ -163,6 +165,35 @@ div.box>main{
   font-weight:300;
   display:flex;
   flex-direction:column;
+}
+
+div.courses{
+	display:flex;
+	flex-flow:row;
+	flex-wrap:wrap;
+}
+div.courses>div{
+	font-weight:bold;
+	background:var(--color-primary);
+	box-shadow:0.25em 0.25em 1em rgba(150,80,0,0.3),
+		-0.25em -0.25em 1em rgba(0,80,150,0.3);
+	padding:0.5em;
+	border-radius:0.5em;
+	margin:0.5em 0.5em 0 0;
+}
+
+div.skills{
+	margin-top:2em;
+}
+
+div.skills>span{
+	font-weight:bold;
+	background:var(--color-primary);
+	box-shadow:0.25em 0.25em 1em rgba(150,80,0,0.3),
+		-0.25em -0.25em 1em rgba(0,80,150,0.3);
+	padding:0.5em;
+	border-radius:0.5em;
+	margin-right:0.5em;
 }
 
 @media only screen and (max-width: 1000px) {
