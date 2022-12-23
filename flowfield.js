@@ -9,6 +9,7 @@ var r,g,b;
 
 function setup(){
   var c = createCanvas(window.innerWidth -18,window.innerHeight);
+  c.parent("body")
   c.class("flow");
   col = floor(width/scl);
   row = floor(height/scl);
