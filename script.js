@@ -5,7 +5,6 @@ window.addEventListener('load', (e)=>{
         e.classList.add("scroll_anim");
     }
     
-
     scroll_e = document.getElementsByClassName('scroll_anim');
     
     for(var e of scroll_e){
@@ -13,22 +12,23 @@ window.addEventListener('load', (e)=>{
     }
     
     var skills = document.getElementsByClassName("skills");
+    skills.add(document.getElementsByClassName("progress-bar"))
     for(var s of skills){
-        for(var i = 0; i < s.childNodes.length; i++){
-            c = s.childNodes[i]
+        for(var i = 0; i < s.children.length; i++){
+            var c = s.children[i]
             c.classList.add("scroll_anim");
             c.style.transitionDelay = (i * 100)  + "ms";
         }
     }
-
-
-    
 
     setInterval(()=>{
         var img = document.getElementById("treeimg");
         var date = new Date();
         img.src = "images/kairos310.github.io_generativeTree_ (" + Math.floor(date.getTime()/2000) % 8 + ").png";
     },2000);
+    
+    // Update the element visibility when the page loads
+    updateElementVisibility();
 })
 
 
@@ -47,5 +47,3 @@ function updateElementVisibility() {
 // Update the element visibility when the user scrolls
 window.addEventListener('scroll', updateElementVisibility);
 
-// Update the element visibility when the page loads
-updateElementVisibility();
